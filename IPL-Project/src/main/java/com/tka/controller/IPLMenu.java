@@ -8,6 +8,7 @@ import com.tka.service.IPLService;
 
 public class IPLMenu {
 	public static void main(String[] args) {
+		List<Player> allPlayer ;
         Scanner sc = new Scanner(System.in);
         IPLService iplservice = new IPLService();
 
@@ -99,12 +100,14 @@ public class IPLMenu {
                     break;
 
                 case 8:
+					allPlayers = iplservice.getAllPlayer();
                     Player orangeCap = iplservice.mostRuns();
                     System.out.println("Orange Cap Holder --> " +
                         orangeCap.getP_name() + " -> " + orangeCap.getRuns());
                     break;
 
                 case 9:
+					allPlayers = iplservice.getAllPlayer();
                     Player purpleCap = iplservice.mostWickets();
                     System.out.println("Purple Cap Holder --> " +
                         purpleCap.getP_name() + " -> " + purpleCap.getWicket());
